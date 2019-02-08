@@ -17,11 +17,9 @@ export class SignUp extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (
-      nextProps.message ==
-      "User created successfully you can login in now. Click the login button "
-    ) {
+    if (nextProps.message == "User created successfully") {
       toast.success(nextProps.message);
+      window.location.href = "/login"
     } else {
       toast.error(nextProps.message);
     }
@@ -38,7 +36,7 @@ export class SignUp extends Component {
   };
 
   render() {
-    const{message}=this.state
+    const { message } = this.state;
     return (
       <SignUpView
         onSubmit={this.handleSubmit}
@@ -51,12 +49,12 @@ export class SignUp extends Component {
 
 SignUp.propTypes = {
   SignUpAction: PropTypes.func.isRequired,
-  message: PropTypes.shape('')
-}
+  message: PropTypes.shape("")
+};
 
 SignUp.defaultProps = {
-  message: ''
-}
+  message: ""
+};
 
 export const mapStateToProps = state => {
   return {
