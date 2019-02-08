@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import SignUpView from "../../components/Signup/SignUpView";
-import { SignUpAction } from "../../actions/SignUpAction";
+import LoginView from "../../components/Login/LoginView";
+import { LoginAction } from "../../actions/LoginAction";
 import { connect } from "react-redux";
 import { toast } from "react-toastify";
 
-export class SignUp extends Component {
+export class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,19 +16,20 @@ export class SignUp extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    console.log(nextProps);
     if (
-      nextProps.message ==
-      "User created successfully you can login in now. Click the login button "
+      nextProps.message === "You are successfully logged in" ||
+      nextProps.message === "welcome admin"
     ) {
       toast.success(nextProps.message);
-    } else {
-      toast.error(nextProps.message);
+    }else{
+      toast.error(nextProps.message)
     }
   }
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.SignUpAction(this.state);
+    this.props.LoginAction(this.state);
   };
 
   handleChange = e => {
@@ -37,7 +38,7 @@ export class SignUp extends Component {
 
   render() {
     return (
-      <SignUpView
+      <LoginView
         onSubmit={this.handleSubmit}
         onChange={this.handleChange}
         message={this.state.message}
@@ -48,13 +49,11 @@ export class SignUp extends Component {
 
 export const mapStateToProps = state => {
   return {
-    message: state.signup.message.message
+    message: state.login.message.message
   };
 };
 
 export default connect(
   mapStateToProps,
-  {
-    SignUpAction
-  }
-)(SignUp);
+  { LoginAction }
+)(Login);
