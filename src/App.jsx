@@ -1,18 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
 import { hot } from "react-hot-loader";
-import Routes from "./Router";
 import { ToastContainer } from "react-toastify";
+import Routes from "./Router";
 import "react-toastify/dist/ReactToastify.min.css";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Routes />
-        <ToastContainer />
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div className="App">
+      <Routes />
+      <ToastContainer />
+    </div>
+  );
+};
 
 export default hot(module)(App);

@@ -1,7 +1,7 @@
 import React from "react";
-import { Login } from "./Login";
 import { shallow, configure } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
+import { Login } from "./Login";
 
 configure({ adapter: new Adapter() });
 
@@ -13,7 +13,7 @@ let wrapper;
 
 describe("test sign up container", () => {
   beforeEach(() => {
-    wrapper = shallow(<Login {...props}/>);
+    wrapper = shallow(<Login {...props} />);
   });
   it("should match snapshot", () => {
     expect(wrapper).toMatchSnapshot();

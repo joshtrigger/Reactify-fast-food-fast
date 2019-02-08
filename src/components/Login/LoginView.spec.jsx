@@ -10,7 +10,7 @@ let props = { onChange: jest.fn(), onSubmit: jest.fn(), message: "" };
 
 describe('test login component', () => {
   beforeEach(()=>{
-    wrapper = shallow(<LoginView {...props}/>)
+    wrapper = shallow(<LoginView {...props} />)
   })
   it('match snapshots', ()=>{
     expect(wrapper).toMatchSnapshot()

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import SignUpView from "../../components/Signup/SignUpView";
-import { SignUpAction } from "../../actions/SignUpAction";
 import { connect } from "react-redux";
 import { toast } from "react-toastify";
+import PropTypes from "prop-types";
+import SignUpView from "../../components/Signup/SignUpView";
+import { SignUpAction } from "../../actions/SignUpAction";
 
 export class SignUp extends Component {
   constructor(props) {
@@ -27,8 +28,9 @@ export class SignUp extends Component {
   }
 
   handleSubmit = e => {
+    const { SignUpAction } = this.props;
     e.preventDefault();
-    this.props.SignUpAction(this.state);
+    SignUpAction(this.state);
   };
 
   handleChange = e => {
@@ -36,14 +38,24 @@ export class SignUp extends Component {
   };
 
   render() {
+    const{message}=this.state
     return (
       <SignUpView
         onSubmit={this.handleSubmit}
         onChange={this.handleChange}
-        message={this.state.message}
+        message={message}
       />
     );
   }
+}
+
+SignUp.propTypes = {
+  SignUpAction: PropTypes.func.isRequired,
+  message: PropTypes.shape('')
+}
+
+SignUp.defaultProps = {
+  message: ''
 }
 
 export const mapStateToProps = state => {
