@@ -1,9 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   MDBContainer,
   MDBRow,
   MDBCol,
-  MDBInput,
   MDBBtn,
   MDBCard,
   MDBCardBody
@@ -64,5 +64,16 @@ export const LoginView = props => {
     </MDBContainer>
   );
 };
+
+LoginView.propTypes = {
+  message: PropTypes.shape(''),
+  onChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired
+}
+
+LoginView.defaultProps = {
+  message: ''
+}
+
 
 export default LoginView;

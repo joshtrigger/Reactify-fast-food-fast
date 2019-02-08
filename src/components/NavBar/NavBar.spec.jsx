@@ -1,12 +1,12 @@
 import React from "react";
 import { shallow, configure } from "enzyme";
-import { NavbarPage } from "./NavBar";
 import Adapter from "enzyme-adapter-react-16";
+import { NavbarPage } from "./NavBar";
+
 
 configure({ adapter: new Adapter() });
 
 let wrapper;
-let props = {};
 
 describe('test navbar', () => {
   beforeEach(()=>{

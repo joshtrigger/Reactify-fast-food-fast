@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow, configure } from "enzyme";
-import { SignUpView } from "./SignUpView";
 import Adapter from "enzyme-adapter-react-16";
+import { SignUpView } from "./SignUpView";
 
 configure({ adapter: new Adapter() });
 
