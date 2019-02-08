@@ -19,7 +19,7 @@ export class SignUp extends Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.message == "User created successfully") {
       toast.success(nextProps.message);
-      window.location.href = "/login"
+      setTimeout(function(){window.location.href = "/login", 2000})
     } else {
       toast.error(nextProps.message);
     }
