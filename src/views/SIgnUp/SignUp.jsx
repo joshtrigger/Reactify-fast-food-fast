@@ -19,7 +19,7 @@ export class SignUp extends Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.message == "User created successfully") {
       toast.success(nextProps.message);
-      window.location.href = "/login"
+      setTimeout(function(){window.location.href = "/login", 2000})
     } else {
       toast.error(nextProps.message);
     }
@@ -49,11 +49,11 @@ export class SignUp extends Component {
 
 SignUp.propTypes = {
   SignUpAction: PropTypes.func.isRequired,
-  message: PropTypes.shape("")
+  message: PropTypes.shape({})
 };
 
 SignUp.defaultProps = {
-  message: ""
+  message: {}
 };
 
 export const mapStateToProps = state => {

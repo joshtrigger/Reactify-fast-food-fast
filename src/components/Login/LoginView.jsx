@@ -66,13 +66,13 @@ export const LoginView = props => {
 };
 
 LoginView.propTypes = {
-  message: PropTypes.shape(''),
+  message: PropTypes.shape({}),
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired
 }
 
 LoginView.defaultProps = {
-  message: ''
+  message: {}
 }
 
 

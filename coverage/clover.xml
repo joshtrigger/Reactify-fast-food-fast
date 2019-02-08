@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1549629185553" clover="3.2.0">
-  <project timestamp="1549629185554" name="All files">
-    <metrics statements="59" coveredstatements="54" conditionals="12" coveredconditionals="10" methods="29" coveredmethods="27" elements="100" coveredelements="91" complexity="0" loc="59" ncloc="59" packages="9" files="14" classes="14"/>
+<coverage generated="1549968432656" clover="3.2.0">
+  <project timestamp="1549968432656" name="All files">
+    <metrics statements="91" coveredstatements="77" conditionals="17" coveredconditionals="11" methods="37" coveredmethods="30" elements="145" coveredelements="118" complexity="0" loc="91" ncloc="91" packages="9" files="14" classes="14"/>
     <package name="src">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="App.jsx" path="/Users/joshdan/Desktop/reactify-fast-food-fast/src/App.jsx">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="9" count="1" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
       </file>
       <file name="Router.jsx" path="/Users/joshdan/Desktop/reactify-fast-food-fast/src/Router.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -15,13 +16,15 @@
       </file>
     </package>
     <package name="src.actions">
-      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
+      <metrics statements="11" coveredstatements="10" conditionals="2" coveredconditionals="1" methods="8" coveredmethods="8"/>
       <file name="LoginAction.js" path="/Users/joshdan/Desktop/reactify-fast-food-fast/src/actions/LoginAction.js">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
         <line num="3" count="3" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
+        <line num="11" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
       </file>
       <file name="SignUpAction.js" path="/Users/joshdan/Desktop/reactify-fast-food-fast/src/actions/SignUpAction.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
@@ -36,43 +39,63 @@
       </file>
     </package>
     <package name="src.components.Login">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="LoginView.jsx" path="/Users/joshdan/Desktop/reactify-fast-food-fast/src/components/Login/LoginView.jsx">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="12" count="3" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
+        <line num="68" count="3" type="stmt"/>
+        <line num="74" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.components.NavBar">
-      <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <metrics statements="21" coveredstatements="12" conditionals="4" coveredconditionals="1" methods="10" coveredmethods="5"/>
       <file name="NavBar.jsx" path="/Users/joshdan/Desktop/reactify-fast-food-fast/src/components/NavBar/NavBar.jsx">
-        <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="26" count="2" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
+        <metrics statements="21" coveredstatements="12" conditionals="4" coveredconditionals="1" methods="10" coveredmethods="5"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="50" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="58" count="4" type="stmt"/>
+        <line num="59" count="4" type="stmt"/>
+        <line num="83" count="2" type="stmt"/>
+        <line num="87" count="2" type="stmt"/>
+        <line num="91" count="2" type="stmt"/>
+        <line num="92" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.Signup">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="SignUpView.jsx" path="/Users/joshdan/Desktop/reactify-fast-food-fast/src/components/Signup/SignUpView.jsx">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="12" count="3" type="stmt"/>
         <line num="13" count="2" type="stmt"/>
         <line num="14" count="2" type="stmt"/>
+        <line num="82" count="3" type="stmt"/>
+        <line num="88" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.reducers">
-      <metrics statements="9" coveredstatements="9" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+      <metrics statements="10" coveredstatements="10" conditionals="7" coveredconditionals="7" methods="2" coveredmethods="2"/>
       <file name="LoginReducer.js" path="/Users/joshdan/Desktop/reactify-fast-food-fast/src/reducers/LoginReducer.js">
-        <metrics statements="4" coveredstatements="4" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="3" count="2" type="stmt"/>
-        <line num="8" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="15" count="4" type="stmt"/>
+        <line num="9" count="6" type="cond" truecount="3" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
       </file>
       <file name="SignUpReducer.js" path="/Users/joshdan/Desktop/reactify-fast-food-fast/src/reducers/SignUpReducer.js">
         <metrics statements="4" coveredstatements="4" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
@@ -96,38 +119,47 @@
       </file>
     </package>
     <package name="src.views.Login">
-      <metrics statements="12" coveredstatements="10" conditionals="4" coveredconditionals="3" methods="6" coveredmethods="5"/>
+      <metrics statements="16" coveredstatements="14" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="5"/>
       <file name="Login.jsx" path="/Users/joshdan/Desktop/reactify-fast-food-fast/src/views/Login/Login.jsx">
-        <metrics statements="12" coveredstatements="10" conditionals="4" coveredconditionals="3" methods="6" coveredmethods="5"/>
-        <line num="9" count="4" type="stmt"/>
+        <metrics statements="16" coveredstatements="14" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="5"/>
         <line num="10" count="4" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="21" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
         <line num="40" count="6" type="stmt"/>
-        <line num="50" count="2" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
+        <line num="41" count="6" type="stmt"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="61" count="2" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.views.SIgnUp">
-      <metrics statements="11" coveredstatements="10" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="6"/>
+      <metrics statements="16" coveredstatements="14" conditionals="2" coveredconditionals="1" methods="7" coveredmethods="6"/>
       <file name="SignUp.jsx" path="/Users/joshdan/Desktop/reactify-fast-food-fast/src/views/SIgnUp/SignUp.jsx">
-        <metrics statements="11" coveredstatements="10" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="6"/>
-        <line num="9" count="5" type="stmt"/>
+        <metrics statements="16" coveredstatements="14" conditionals="2" coveredconditionals="1" methods="7" coveredmethods="6"/>
         <line num="10" count="5" type="stmt"/>
-        <line num="19" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="20" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
         <line num="35" count="1" type="stmt"/>
         <line num="39" count="7" type="stmt"/>
-        <line num="49" count="2" type="stmt"/>
-        <line num="50" count="1" type="stmt"/>
+        <line num="40" count="7" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
+        <line num="59" count="2" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
       </file>
     </package>
   </project>

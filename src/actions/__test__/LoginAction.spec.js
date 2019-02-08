@@ -28,7 +28,7 @@ describe("test login action", () => {
           username: "joshua",
           password: "qwerty"
         },
-        type: actionTypes.LOGIN_SUCCESS
+        type: actionTypes.LOGIN_FAILURE
       }
     ];
     const store = mockStore();

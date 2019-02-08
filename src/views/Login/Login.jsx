@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 import LoginView from "../../components/Login/LoginView";
 import { LoginAction } from "../../actions/LoginAction";
 
-
 export class Login extends Component {
   constructor(props) {
     super(props);
@@ -13,16 +12,15 @@ export class Login extends Component {
       username: "",
       email: "",
       password: "",
-      message: ""
+      message: "",
+      token: ""
     };
   }
 
   componentWillReceiveProps(nextProps) {
-    if (
-      nextProps.message === "You are successfully logged in" ||
-      nextProps.message === "welcome admin"
-    ) {
+    if (nextProps.token) {
       toast.success(nextProps.message);
+      window.localStorage.setItem("token", nextProps.token);
     } else {
       toast.error(nextProps.message);
     }
@@ -52,15 +50,18 @@ export class Login extends Component {
 
 Login.propTypes = {
   LoginAction: PropTypes.func.isRequired,
-  message: PropTypes.shape('')
-}
+  message: PropTypes.shape({}),
+  token: PropTypes.shape({})
+};
 
 Login.defaultProps = {
-  message: ''
-}
+  message: {},
+  token: {}
+};
 export const mapStateToProps = state => {
   return {
-    message: state.login.message.message
+    message: state.login.message,
+    token: state.login.token
   };
 };
 
