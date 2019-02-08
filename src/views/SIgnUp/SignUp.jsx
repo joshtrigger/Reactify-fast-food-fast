@@ -12,16 +12,19 @@ export class SignUp extends Component {
       username: "",
       email: "",
       password: "",
-      message: ""
+      message: "",
+      loading: "Register",
+      isDisabled: false
     };
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.message == "User created successfully") {
       toast.success(nextProps.message);
-      setTimeout(function(){window.location.href = "/login", 2000})
+      setTimeout(() => {(window.location.href = "/login")}, 3000);
     } else {
       toast.error(nextProps.message);
+      this.setState({ loading: "Register", isDisabled: false });
     }
   }
 
@@ -29,6 +32,7 @@ export class SignUp extends Component {
     const { SignUpAction } = this.props;
     e.preventDefault();
     SignUpAction(this.state);
+    this.setState({ loading: "Registering...", isDisabled: true });
   };
 
   handleChange = e => {
@@ -36,10 +40,13 @@ export class SignUp extends Component {
   };
 
   render() {
+    const { loading, isDisabled } = this.state;
     return (
       <SignUpView
         onSubmit={this.handleSubmit}
         onChange={this.handleChange}
+        loading={loading}
+        isDisabled={isDisabled}
       />
     );
   }

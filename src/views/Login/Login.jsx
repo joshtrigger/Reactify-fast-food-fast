@@ -13,7 +13,9 @@ export class Login extends Component {
       email: "",
       password: "",
       message: "",
-      token: ""
+      token: "",
+      loading: "Login",
+      isDisabled: false
     };
   }
 
@@ -22,11 +24,13 @@ export class Login extends Component {
     if (nextProps.token) {
       if (message != nextProps.message) {
         toast.success(nextProps.message);
+        setTimeout(() => {(window.location.href = "/welcome")}, 3000);
       }
       this.setState({ message: nextProps.message });
       window.localStorage.setItem("token", nextProps.token);
     } else if (nextProps.message) {
       toast.error(nextProps.message);
+      this.setState({ loading: "Login", isDisabled: false });
     }
   }
 
@@ -34,6 +38,7 @@ export class Login extends Component {
     e.preventDefault();
     const { LoginAction } = this.props;
     LoginAction(this.state);
+    this.setState({ loading: "Logging in...", isDisabled: true });
   };
 
   handleChange = e => {
@@ -41,10 +46,13 @@ export class Login extends Component {
   };
 
   render() {
+    const { loading, isDisabled } = this.state;
     return (
       <LoginView
         onSubmit={this.handleSubmit}
         onChange={this.handleChange}
+        loading={loading}
+        isDisabled={isDisabled}
       />
     );
   }
