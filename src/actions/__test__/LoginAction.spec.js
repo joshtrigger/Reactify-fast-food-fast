@@ -1,7 +1,7 @@
 import configureMockStore from "redux-mock-store";
 import thunk from "redux-thunk";
 import fetchMock from "fetch-mock";
-import { LoginAction } from "../LoginAction";
+import { LoginAction, LogOut } from "../LoginAction";
 import actionTypes from "../actionTypes";
 
 const middlewares = [thunk];
@@ -36,5 +36,9 @@ describe("test login action", () => {
     return store.dispatch(LoginAction()).then(() => {
       expect(store.getActions()).toEqual(expectedActions);
     });
+  });
+  it("should mock logout", () => {
+    const store = mockStore();
+    return store.dispatch(LogOut());
   });
 });

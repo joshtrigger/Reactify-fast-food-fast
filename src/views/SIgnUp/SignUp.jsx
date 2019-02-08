@@ -36,12 +36,10 @@ export class SignUp extends Component {
   };
 
   render() {
-    const { message } = this.state;
     return (
       <SignUpView
         onSubmit={this.handleSubmit}
         onChange={this.handleChange}
-        message={message}
       />
     );
   }

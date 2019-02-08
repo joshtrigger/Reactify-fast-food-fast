@@ -18,6 +18,11 @@ export default function(state = initialState, action) {
         ...state,
         message: action.payload.message
       };
+    case actionTypes.LOGOUT:
+      return {
+        ...state,
+        message: ""
+      };
     default:
       return state;
   }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 import {
   MDBNavbar,
   MDBNavbarBrand,
@@ -10,6 +10,7 @@ import {
   MDBNavbarToggler,
   MDBCollapse
 } from "mdbreact";
+import { LogOut } from "../../actions/LoginAction";
 
 export class NavbarPage extends Component {
   constructor(props) {
@@ -39,7 +40,9 @@ export class NavbarPage extends Component {
   };
 
   logOut = () => {
+    const { LogOut } = this.props;
     window.localStorage.removeItem("token");
+    LogOut();
     setTimeout(() => {
       this.checkToken();
     }, 200);
@@ -81,12 +84,13 @@ export class NavbarPage extends Component {
 }
 
 NavbarPage.propTypes = {
-  token: PropTypes.shape({})
-}
+  token: PropTypes.shape({}),
+  LogOut: PropTypes.func.isRequired
+};
 
 NavbarPage.defaultProps = {
   token: {}
-}
+};
 
 export const mapStateToProps = state => {
   return {
@@ -96,5 +100,5 @@ export const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  {}
+  { LogOut }
 )(NavbarPage);
