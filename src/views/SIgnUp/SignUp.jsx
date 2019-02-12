@@ -49,11 +49,11 @@ export class SignUp extends Component {
 
 SignUp.propTypes = {
   SignUpAction: PropTypes.func.isRequired,
-  message: PropTypes.shape("")
+  message: PropTypes.shape({})
 };
 
 SignUp.defaultProps = {
-  message: ""
+  message: {}
 };
 
 export const mapStateToProps = state => {

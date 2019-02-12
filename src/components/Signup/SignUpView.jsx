@@ -80,13 +80,13 @@ export const SignUpView = props => {
 };
 
 SignUpView.propTypes = {
-  message: PropTypes.shape(''),
+  message: PropTypes.shape({}),
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired
 }
 
 SignUpView.defaultProps = {
-  message: ''
+  message: {}
 }
 
 export default SignUpView;
