@@ -13,6 +13,7 @@ export const SignUpAction = (data) => dispatch => {
       payload: response
     })
   })
+  .catch(err=>err)
 };
 
 export default SignUpAction;

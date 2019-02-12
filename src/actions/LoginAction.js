@@ -19,7 +19,8 @@ export const LoginAction = data => dispatch => {
           payload: response
         });
       }
-    });
+    })
+    .catch(err=>err)
 };
 
 export const LogOut = () => dispatch => {
@@ -27,5 +28,6 @@ export const LogOut = () => dispatch => {
     type: actionTypes.LOGOUT
   });
 };
+
 
 export default LoginAction;

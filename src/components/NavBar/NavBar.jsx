@@ -74,7 +74,7 @@ export class NavbarPage extends Component {
               <MDBNavLink to="/login">Login</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem onClick={this.logOut} className={logOutClass}>
-              <MDBNavLink to="/">Logout</MDBNavLink>
+              <MDBNavLink to="/login">Logout</MDBNavLink>
             </MDBNavItem>
           </MDBNavbarNav>
         </MDBCollapse>

@@ -16,7 +16,6 @@ describe('test navbar', () => {
     expect(wrapper).toMatchSnapshot()
   })
   it('should mock logout', () => {
-    // console.log(wrapper.instance());
     expect(wrapper.instance().LogOut)
   })
 })

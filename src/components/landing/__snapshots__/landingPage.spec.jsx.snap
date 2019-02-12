@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test ladning page should match snapshot 1`] = `ShallowWrapper {}`;

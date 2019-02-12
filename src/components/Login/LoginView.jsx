@@ -10,7 +10,7 @@ import {
 } from "mdbreact";
 
 export const LoginView = props => {
-  const { onChange, onSubmit } = props;
+  const { onChange, onSubmit, loading, isDisabled } = props;
   return (
     <MDBContainer className="w-75  pt-5 mt-3 mb-5">
       <MDBRow className="flex flex-center">
@@ -51,8 +51,8 @@ export const LoginView = props => {
                 />
                 <br />
                 <div className="text-center mt-4">
-                  <MDBBtn color="brown" type="submit">
-                    Login
+                  <MDBBtn color="brown" type="submit" disabled={isDisabled}>
+                    {loading}
                   </MDBBtn>
                 </div>
               </form>
