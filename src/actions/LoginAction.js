@@ -17,9 +17,15 @@ export const LoginAction = data => dispatch => {
         dispatch({
           type: actionTypes.LOGIN_FAILURE,
           payload: response
-        })
+        });
       }
     });
+};
+
+export const LogOut = () => dispatch => {
+  dispatch({
+    type: actionTypes.LOGOUT
+  });
 };
 
 export default LoginAction;

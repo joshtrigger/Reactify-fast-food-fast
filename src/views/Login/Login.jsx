@@ -18,10 +18,14 @@ export class Login extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    const { message } = this.state;
     if (nextProps.token) {
-      toast.success(nextProps.message);
+      if (message != nextProps.message) {
+        toast.success(nextProps.message);
+      }
+      this.setState({ message: nextProps.message });
       window.localStorage.setItem("token", nextProps.token);
-    } else {
+    } else if (nextProps.message) {
       toast.error(nextProps.message);
     }
   }
@@ -37,12 +41,10 @@ export class Login extends Component {
   };
 
   render() {
-    const { message } = this.state;
     return (
       <LoginView
         onSubmit={this.handleSubmit}
         onChange={this.handleChange}
-        message={message}
       />
     );
   }

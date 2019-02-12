@@ -10,7 +10,7 @@ import {
 } from "mdbreact";
 
 export const LoginView = props => {
-  const { onChange, onSubmit, message } = props;
+  const { onChange, onSubmit } = props;
   return (
     <MDBContainer className="w-75  pt-5 mt-3 mb-5">
       <MDBRow className="flex flex-center">
@@ -50,7 +50,6 @@ export const LoginView = props => {
                   required
                 />
                 <br />
-                <p className="red-text">{message}</p>
                 <div className="text-center mt-4">
                   <MDBBtn color="brown" type="submit">
                     Login
@@ -66,14 +65,8 @@ export const LoginView = props => {
 };
 
 LoginView.propTypes = {
-  message: PropTypes.shape({}),
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired
 }
-
-LoginView.defaultProps = {
-  message: {}
-}
-
 
 export default LoginView;
