@@ -80,7 +80,9 @@ export const SignUpView = props => {
 
 SignUpView.propTypes = {
   onChange: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired
+  onSubmit: PropTypes.func.isRequired,
+  loading: PropTypes.string.isRequired,
+  isDisabled: PropTypes.bool.isRequired
 };
 
 export default SignUpView;
